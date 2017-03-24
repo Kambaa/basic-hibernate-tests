@@ -5,6 +5,7 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import tr.com.yusufgunduz.entity.User;
 
 /**
  * Created by Kambaa on 3/24/17.
@@ -23,7 +24,7 @@ class HibernateUtil {
                         .build();
 
                 // Create MetadataSources
-                MetadataSources sources = new MetadataSources(registry);
+                MetadataSources sources = new MetadataSources(registry).addAnnotatedClass(User.class);
 
                 // Create Metadata
                 Metadata metadata = sources.getMetadataBuilder().build();
