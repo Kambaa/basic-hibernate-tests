@@ -1,0 +1,4 @@
+git@git.faster.click:Kambaa/basic-hibernate-tests.git
+.idea/
+*.iml
+target/
